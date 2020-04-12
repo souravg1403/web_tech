@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <img src="backdrop.png" id="backdrop">
+        <div class=img></div>
+        <img src="theme.png" id="theme">
+        <img src="front_road.png"  id="front_road">
+        <div class=clouds></div>
+
+    </section>
+
+    <script type="text/javascript">
+        let backdrop = document.getElementById("backdrop")
+        let theme = document.getElementById("theme")
+        let front_road = document.getElementById("front_road")
+        
+    
+        window.addEventListener('scroll', function(){
+            var value = window.scrollY
+    
+            backdrop.style.top = value * 0.5 + 'px';
+            theme.style.top = value * 0.5 + 'px';
+            
+            front_road.style.top = value * 0.15 + 'px'
+            
+        })
+    </script>
+</body>
+</html>
